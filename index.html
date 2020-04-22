@@ -19,6 +19,27 @@ img {
   font-family: myFirstFont;
   src: url(/font/font1.ttf);
 }
+.typewriter {
+      font-family: monospace; /* Web-safe typewriter-like font */
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .17em solid pink; /* The typewriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .17em; /* Adjust as needed */
+      animation: 
+      typing 3.5s steps(30, end),
+      blinking-cursor .5s step-end infinite;
+      }
+      /* The typing effect */
+      @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+      }
+      /* The typewriter cursor effect */
+      @keyframes blinking-cursor {
+      from, to { border-color: transparent }
+      50% { border-color: pink; }
+      }   
       </style>
    </head>
    <body>
@@ -52,7 +73,7 @@ img {
       
          <div class = "jumbotron bg-dark">
 <img src="/image/profile.png" class="mx-auto d-block" style="width:50%" >
-            <p>
+            <p class="typewriter">
                Tutorials Point originated from the idea that there exists a class 
                of readers who respond better to online content and prefer to learn 
                new skills at their own pace from the comforts of their drawing rooms.
